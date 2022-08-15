@@ -1,13 +1,18 @@
 <script setup>
 import { RouterView } from "vue-router";
-import NavbarHeader from "@/components/NavbarHeader.vue";
+import NavbarHeader from "@/components/navbar/NavbarHeader.vue";
 </script>
 
 <template>
   <div class="mx-56 px-2">
     <navbar-header></navbar-header>
-    <div class="p-10">
+    <div class="px-10 py-14">
       <router-view />
     </div>
   </div>
 </template>
+<style>
+.router-link-active {
+  color: #000000 !important;
+}
+</style>
