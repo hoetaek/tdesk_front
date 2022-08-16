@@ -6,7 +6,7 @@ import NavbarHeader from "@/components/navbar/NavbarHeader.vue";
 <template>
   <div class="mx-56 px-2">
     <navbar-header></navbar-header>
-    <div class="px-10 py-14">
+    <div class="px-8 py-14">
       <router-view />
     </div>
   </div>
