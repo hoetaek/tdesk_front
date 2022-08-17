@@ -1,6 +1,6 @@
 <template>
   <div class="m-10">
-    <router-link :to="to" class="text-2xl text-light-grey font-bold">
+    <router-link :to="{ name: to }" class="text-2xl text-light-grey font-bold">
       <slot></slot
     ></router-link>
   </div>

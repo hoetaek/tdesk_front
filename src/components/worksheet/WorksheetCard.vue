@@ -1,6 +1,7 @@
 <template>
   <div
     class="relative flex border-solid border-4 border-black rounded-2xl h-104"
+    @click.prevent="$router.push({ name: route })"
   >
     <div
       v-if="!isReady"
@@ -35,6 +36,7 @@ export default {
       liked: this.worksheet.liked,
       heartNum: this.worksheet.heartNum,
       filename: this.worksheet.filename,
+      route: this.worksheet.route,
     };
   },
 };

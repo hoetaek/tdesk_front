@@ -17,21 +17,53 @@ const router = createRouter({
     },
     {
       path: "/worksheet",
-      name: "worksheet",
       component: () =>
-        import(/* webpackChunkName: "about" */ "../views/WorksheetView.vue"),
+        import(
+          /* webpackChunkName: "worksheet" */ "../views/WorksheetView.vue"
+        ),
+      children: [
+        {
+          path: "",
+          name: "worksheet",
+          component: () =>
+            import(
+              /* webpackChunkName: "selection" */ "../views/WorksheetSelectionView.vue"
+            ),
+        },
+        {
+          path: "wordsearch",
+          name: "wordsearch",
+          component: () =>
+            import(
+              /* webpackChunkName: "wordsearch" */ "../views/worksheet/WordsearchView.vue"
+            ),
+        },
+        {
+          path: "board",
+          name: "board",
+          component: () =>
+            import(
+              /* webpackChunkName: "board" */ "../views/worksheet/BoardView.vue"
+            ),
+        },
+        {
+          path: "dobble",
+          name: "dobble",
+          component: () =>
+            import(
+              /* webpackChunkName: "dobble" */ "../views/worksheet/DobbleView.vue"
+            ),
+        },
+      ],
     },
-    {
-      path: "/wordsearch",
-      name: "wordsearch",
-      component: () =>
-        import(/* webpackChunkName: "about" */ "../views/WordsearchView.vue"),
-    },
+
     {
       path: "/suggestion",
       name: "suggestion",
       component: () =>
-        import(/* webpackChunkName: "about" */ "../views/SuggestionView.vue"),
+        import(
+          /* webpackChunkName: "suggestion" */ "../views/SuggestionView.vue"
+        ),
     },
   ],
 });

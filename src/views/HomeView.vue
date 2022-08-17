@@ -13,7 +13,7 @@
         <div>
           <button
             class="bg-primary text-white rounded-lg py-3 px-6"
-            @click="$router.push('/worksheet')"
+            @click="$router.push({ name: 'worksheet' })"
           >
             <icon-plus class="inline-block mr-3"></icon-plus>
             <span>활동지 만들기</span>
