@@ -1,29 +1,33 @@
 <template>
-  <div>
-    <worksheet-template>
-      <template v-slot:options>
-        <worksheet-option :isActive="false" to="worksheet"
-          >활동지 만들기</worksheet-option
-        >
-        <worksheet-option :isActive="false" to="wordsearch"
-          >언어 선택</worksheet-option
-        >
-        <worksheet-option :isActive="true">정보 입력</worksheet-option>
-      </template>
-    </worksheet-template>
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
-import WorksheetTemplate from "@/components/worksheet/WorksheetTemplate.vue";
-import WorksheetOption from "@/components/worksheet/WorksheetOption.vue";
-
+import { useWsOptionStore } from "@/stores/ws_option.js";
 export default {
   data() {
     return {};
   },
+  mounted() {
+    this.store.option_list.push({
+      title: "언어 선택",
+      isActive: true,
+      to: "wordsearch",
+    });
+    this.store.option_list.find(
+      (o) => o.title === "활동지 만들기"
+    ).isActive = false;
+  },
+  unmounted() {
+    this.store.option_list.pop();
+    this.store.option_list.find(
+      (o) => o.title === "활동지 만들기"
+    ).isActive = true;
+  },
 
-  components: { WorksheetTemplate, WorksheetOption },
+  setup() {
+    const store = useWsOptionStore();
+    return { store };
+  },
 };
 </script>

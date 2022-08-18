@@ -1,26 +1,18 @@
 <template>
   <div>
-    <router-view></router-view>
-    <worksheet-template contentClass="flex flex-row justify-between">
-      <template v-slot:options>
-        <worksheet-option :isActive="true">활동지 만들기</worksheet-option>
-      </template>
-      <template v-slot:content>
-        <div class="" v-for="(worksheet, index) in worksheetData" :key="index">
-          <worksheet-card
-            :worksheet="worksheet"
-            class="cursor-pointer"
-          ></worksheet-card>
-        </div>
-      </template>
-    </worksheet-template>
+    <div class="flex flex-row justify-between">
+      <worksheet-card
+        :worksheet="worksheet"
+        class="cursor-pointer"
+        v-for="(worksheet, index) in worksheetData"
+        :key="index"
+      ></worksheet-card>
+    </div>
   </div>
 </template>
 
 <script>
-import WorksheetOption from "@/components/worksheet/WorksheetOption.vue";
 import WorksheetCard from "@/components/worksheet/WorksheetCard.vue";
-import WorksheetTemplate from "@/components/worksheet/WorksheetTemplate.vue";
 
 export default {
   data() {
@@ -57,6 +49,6 @@ export default {
     };
   },
 
-  components: { WorksheetOption, WorksheetCard, WorksheetTemplate },
+  components: { WorksheetCard },
 };
 </script>
