@@ -5,7 +5,9 @@
       :class="[
         isActive ? 'border-secondary' : 'border-gray-600',
         isActive ? 'text-secondary' : 'text-gray-600',
+        { 'hover:cursor-pointer': !isActive },
       ]"
+      @click.prevent="isActive ? null : $router.push({ name: to })"
     >
       <slot></slot>
     </div>
@@ -15,6 +17,6 @@
 <script>
 export default {
   name: "WorksheetOption",
-  props: { isActive: Boolean },
+  props: { isActive: Boolean, to: String },
 };
 </script>
