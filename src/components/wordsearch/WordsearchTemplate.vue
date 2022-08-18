@@ -80,11 +80,21 @@
     <div class="font-bold text-3xl mt-10">02 문제 옵션</div>
     <br />
     <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-4 justify-between">
-      <!-- TODO 원하는대로 옵션들 설정하고 값들 받아오기 -->
-      <option-selection></option-selection>
-      <option-selection></option-selection>
-      <option-selection></option-selection>
+      <option-selection
+        optionName="난이도"
+        :optionList="['쉬움', '보통', '어려움']"
+        :valueList="['EASY', 'NORMAL', 'DIFFICULT']"
+        @button-selected-event="selectLevel"
+      ></option-selection>
+      <option-selection
+        optionName="초성 힌트 제공"
+        :optionList="['예', '아니오']"
+        :valueList="[true, false]"
+        @button-selected-event="selectIsScramble"
+      ></option-selection>
     </div>
+    <br />
+    <br />
     <br />
     <button
       class="bg-primary text-white rounded-lg w-full py-7"
@@ -107,6 +117,8 @@ export default {
   data() {
     return {
       listOfText: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+      level: "EASY",
+      isScramble: true,
     };
   },
   methods: {
@@ -114,6 +126,12 @@ export default {
     download() {},
     textInputChanged(idx, text) {
       this.listOfText[idx] = text;
+    },
+    selectLevel(level) {
+      this.level = level;
+    },
+    selectIsScramble(isScramble) {
+      this.isScramble = isScramble;
     },
   },
   components: {
