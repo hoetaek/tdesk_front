@@ -1,7 +1,8 @@
 <template>
   <div
     class="relative flex border-solid border-4 border-black rounded-2xl h-104"
-    @click.prevent="$router.push({ name: route })"
+    :class="{ 'cursor-pointer': isReady }"
+    @click.prevent="isReady ? $router.push({ name: route }) : null"
   >
     <div
       v-if="!isReady"

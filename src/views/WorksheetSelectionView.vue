@@ -3,7 +3,6 @@
     <div class="flex flex-row justify-between">
       <worksheet-card
         :worksheet="worksheet"
-        class="cursor-pointer"
         v-for="(worksheet, index) in worksheetData"
         :key="index"
       ></worksheet-card>
