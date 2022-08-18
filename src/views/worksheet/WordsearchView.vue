@@ -2,7 +2,7 @@
   <div>
     <worksheet-template>
       <template v-slot:options>
-        <!-- Todo go backwards when clicking deactivated option -->
+        <!-- TODO go backwards when clicking deactivated option -->
         <worksheet-option :isActive="false">활동지 만들기</worksheet-option>
         <worksheet-option :isActive="false">언어 선택</worksheet-option>
         <worksheet-option :isActive="true">정보 입력</worksheet-option>
