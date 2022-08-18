@@ -15,8 +15,8 @@
             class="bg-primary text-white rounded-lg py-3 px-6"
             @click="$router.push({ name: 'worksheet' })"
           >
-            <icon-plus class="inline-block mr-3"></icon-plus>
-            <span>활동지 만들기</span>
+            <icon-plus class="align-middle inline-block mr-3"></icon-plus>
+            <span class="align-middle inline-block">활동지 만들기</span>
           </button>
         </div>
       </div>
