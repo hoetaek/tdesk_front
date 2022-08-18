@@ -1,15 +1,15 @@
 <template>
-  <td
-    class="py-7 text-center hover:cursor-text"
-    @click.prevent="$refs.text.focus()"
-  >
-    <input
-      type="text"
-      class="input"
-      ref="text"
-      v-model="inputText"
-      @input="onDataChanged"
-    />
+  <td class="relative hover:cursor-text" @click.prevent="$refs.text.focus()">
+    <div class="absolute z-10 text-base font-bold ml-2">{{ idx }}</div>
+    <div class="py-7 text-center">
+      <input
+        type="text"
+        class="input"
+        ref="text"
+        v-model="inputText"
+        @input="onDataChanged"
+      />
+    </div>
   </td>
 </template>
 
@@ -19,6 +19,9 @@ export default {
     return {
       inputText: "",
     };
+  },
+  props: {
+    idx: Number,
   },
   methods: {
     onDataChanged() {

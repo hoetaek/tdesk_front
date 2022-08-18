@@ -9,71 +9,30 @@
       <table>
         <tr>
           <td-input
-            @input-text-changed="textInputChanged(0, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(1, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(2, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(3, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(4, $event)"
-          ></td-input>
+            v-for="index in 5"
+            :key="index"
+            @input-text-changed="textInputChanged(index - 1, $event)"
+            :idx="index"
+          >
+          </td-input>
         </tr>
         <tr>
           <td-input
-            @input-text-changed="textInputChanged(5, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(6, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(7, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(8, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(9, $event)"
-          ></td-input>
+            v-for="index in 5"
+            :key="index"
+            @input-text-changed="textInputChanged(index + 4, $event)"
+            :idx="index + 5"
+          >
+          </td-input>
         </tr>
         <tr>
           <td-input
-            @input-text-changed="textInputChanged(10, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(11, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(12, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(13, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(14, $event)"
-          ></td-input>
-        </tr>
-        <tr>
-          <td-input
-            @input-text-changed="textInputChanged(15, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(16, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(17, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(18, $event)"
-          ></td-input>
-          <td-input
-            @input-text-changed="textInputChanged(19, $event)"
-          ></td-input>
+            v-for="index in 5"
+            :key="index"
+            @input-text-changed="textInputChanged(index + 9, $event)"
+            :idx="index + 10"
+          >
+          </td-input>
         </tr>
       </table>
     </div>
