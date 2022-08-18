@@ -15,6 +15,11 @@ module.exports = {
         secondary: "#4FC3F7",
         overlay: "#B8B8B8CC",
       },
+      borderRadius: {
+        "4xl": 34,
+        "5xl": 37,
+        "6xl": 42,
+      },
     },
   },
 

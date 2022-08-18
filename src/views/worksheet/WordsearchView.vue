@@ -1,19 +1,14 @@
 <template>
   <div>
-    <worksheet-template contentClass="flex flex-row justify-evenly">
+    <worksheet-template>
       <template v-slot:options>
+        <!-- Todo go backwards when clicking deactivated option -->
         <worksheet-option :isActive="false">활동지 만들기</worksheet-option>
-        <worksheet-option :isActive="true">언어 선택</worksheet-option>
-      </template>
-      <template v-slot:content>
-        <div class="flex bg-primary h-44 w-104 rounded-2xl">
-          <div class="m-auto text-white font-bold text-5xl">한국어</div>
-        </div>
-        <div class="flex bg-primary h-44 w-104 rounded-2xl">
-          <div class="m-auto text-white font-bold text-5xl">English</div>
-        </div>
+        <worksheet-option :isActive="false">언어 선택</worksheet-option>
+        <worksheet-option :isActive="true">정보 입력</worksheet-option>
       </template>
     </worksheet-template>
+    <router-view></router-view>
   </div>
 </template>
 

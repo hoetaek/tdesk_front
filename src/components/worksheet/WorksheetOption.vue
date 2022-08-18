@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="border-solid border-4 rounded-full text-center py-4 w-48 mr-5 font-bold text-2xl"
+      class="border-solid border-4 rounded-5xl text-center py-4 w-48 mr-5 font-bold text-2xl"
       :class="[
         isActive ? 'border-secondary' : 'border-gray-600',
         isActive ? 'text-secondary' : 'text-gray-600',
