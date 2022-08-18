@@ -1,5 +1,6 @@
 <template>
   <div>
+    <worksheet-option-list :optionList="optionList"></worksheet-option-list>
     <div class="flex flex-row justify-between">
       <worksheet-card
         :worksheet="worksheet"
@@ -12,10 +13,13 @@
 
 <script>
 import WorksheetCard from "@/components/worksheet/WorksheetCard.vue";
+import WorksheetOptionList from "@/components/worksheet/WorksheetOptionList.vue";
 
 export default {
   data() {
     return {
+      optionList: [{ title: "활동지 만들기", isActive: true, to: "worksheet" }],
+
       worksheetData: [
         {
           filename: "wordsearch_image.png",
@@ -48,6 +52,6 @@ export default {
     };
   },
 
-  components: { WorksheetCard },
+  components: { WorksheetCard, WorksheetOptionList },
 };
 </script>
