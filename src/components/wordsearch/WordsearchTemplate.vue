@@ -39,18 +39,7 @@
     <div class="font-bold text-3xl mt-10">02 문제 옵션</div>
     <br />
     <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-4 justify-between">
-      <option-selection
-        optionName="난이도"
-        :optionList="['쉬움', '보통', '어려움']"
-        :valueList="['EASY', 'NORMAL', 'DIFFICULT']"
-        @button-selected-event="selectLevel"
-      ></option-selection>
-      <option-selection
-        optionName="초성 힌트 제공"
-        :optionList="['예', '아니오']"
-        :valueList="[true, false]"
-        @button-selected-event="selectIsScramble"
-      ></option-selection>
+      <slot></slot>
     </div>
     <br />
     <br />
@@ -68,7 +57,6 @@
 </template>
 
 <script>
-import OptionSelection from "@/components/OptionSelection.vue";
 import IconDownload from "@/components/icons/IconDownload.vue";
 import TdInput from "@/components/TdInput.vue";
 
@@ -76,28 +64,23 @@ export default {
   data() {
     return {
       listOfText: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-      level: "EASY",
-      isScramble: true,
     };
   },
+  props: {
+    lang: { type: String, required: true },
+    download: { type: Function, required: true },
+  },
   methods: {
-    // TODO 다운로드 받는 기능
-    download() {},
     textInputChanged(idx, text) {
       this.listOfText[idx] = text;
-    },
-    selectLevel(level) {
-      this.level = level;
-    },
-    selectIsScramble(isScramble) {
-      this.isScramble = isScramble;
+      this.$emit("tableInputChanged", this.listOfText);
     },
   },
   components: {
-    OptionSelection,
     IconDownload,
     TdInput,
   },
+  emits: ["tableInputChanged"],
 };
 </script>
 <style scoped>

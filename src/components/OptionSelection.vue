@@ -37,11 +37,13 @@ export default {
   components: {
     SmallButton,
   },
-  emits: ["buttonselectedEvent"],
+  emits: ["buttonSelectedEvent"],
   methods: {
     selectButton(idx) {
-      this.selectedIdx = idx;
-      this.$emit("buttonselectedEvent", this.valueList[idx]);
+      if (this.selectedIdx !== idx) {
+        this.selectedIdx = idx;
+        this.$emit("buttonSelectedEvent", this.valueList[idx]);
+      }
     },
   },
 };
