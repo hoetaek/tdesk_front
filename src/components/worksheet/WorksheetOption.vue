@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- TODO change outline color on hover -->
     <div
       class="border-solid border-4 rounded-5xl text-center py-4 w-48 mr-5 font-bold text-2xl"
       :class="[

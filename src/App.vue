@@ -12,6 +12,7 @@ import NavbarHeader from "@/components/navbar/NavbarHeader.vue";
   </div>
 </template>
 <style>
+/* TODO change underline color on selected */
 .router-link-active {
   color: #000000 !important;
 }
