@@ -2,7 +2,7 @@
   <div class="about">
     <div>
       <div class="flex items-center">
-        <div class="basis-1/4"><img src="@/assets/logo.svg" width="169" /></div>
+        <div class="basis-1/4"><img src="@/assets/logo.svg" width="264" /></div>
         <div class="basis-3/4">
           <strong class="text-3xl">교사의 책상</strong>
           <div class="text-2xl">
@@ -21,11 +21,11 @@
       <br />
       <br />
       <br />
-      <div class="flex items-center">
-        <div class="basis-1/4">
-          <img src="@/assets/avatar.png" width="169" />
+      <div class="flex">
+        <div class="">
+          <img src="@/assets/avatar.png" width="264" />
         </div>
-        <div class="basis-3/4">
+        <div class="">
           <strong class="text-3xl">만든 사람들</strong>
           <div class="text-2xl">
             <br />

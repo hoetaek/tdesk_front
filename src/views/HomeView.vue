@@ -25,6 +25,6 @@
 </template>
 
 <script>
-import IconPlus from "../components/icons/IconPlus.vue";
-export default { components: { IconPlus } };
+import IconPlus from '../components/icons/IconPlus.vue'
+export default { components: { IconPlus } }
 </script>

@@ -9,5 +9,5 @@
 <script>
 export default {
   props: { to: String },
-};
+}
 </script>

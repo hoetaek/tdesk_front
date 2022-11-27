@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: "WorksheetOption",
+  name: 'WorksheetOption',
   props: { isActive: Boolean, to: String },
-};
+}
 </script>

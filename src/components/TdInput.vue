@@ -17,17 +17,17 @@
 export default {
   data() {
     return {
-      inputText: "",
-    };
+      inputText: '',
+    }
   },
   props: {
     idx: Number,
   },
   methods: {
     onDataChanged() {
-      this.$emit("inputTextChanged", this.inputText);
+      this.$emit('inputTextChanged', this.inputText)
     },
   },
-  emits: ["inputTextChanged"],
-};
+  emits: ['inputTextChanged'],
+}
 </script>

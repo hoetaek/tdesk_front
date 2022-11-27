@@ -17,21 +17,21 @@
 </template>
 
 <script>
-import WorksheetOptionList from "@/components/worksheet/WorksheetOptionList.vue";
+import WorksheetOptionList from '@/components/worksheet/WorksheetOptionList.vue'
 
 export default {
   data() {
     return {
       optionList: [
-        { title: "활동지 만들기", isActive: false, to: "worksheet" },
+        { title: '활동지 만들기', isActive: false, to: 'worksheet' },
         {
-          title: "언어 선택",
+          title: '언어 선택',
           isActive: true,
-          to: "wordsearch",
+          to: 'wordsearch',
         },
       ],
-    };
+    }
   },
   components: { WorksheetOptionList },
-};
+}
 </script>

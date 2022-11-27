@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import WorksheetOption from "./WorksheetOption.vue";
+import WorksheetOption from './WorksheetOption.vue'
 export default {
   props: {
     optionList: {
@@ -24,5 +24,5 @@ export default {
   components: {
     WorksheetOption,
   },
-};
+}
 </script>

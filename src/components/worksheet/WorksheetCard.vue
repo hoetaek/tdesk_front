@@ -38,7 +38,7 @@ export default {
       heartNum: this.worksheet.heartNum,
       filename: this.worksheet.filename,
       route: this.worksheet.route,
-    };
+    }
   },
-};
+}
 </script>

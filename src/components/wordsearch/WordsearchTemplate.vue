@@ -57,14 +57,14 @@
 </template>
 
 <script>
-import IconDownload from "@/components/icons/IconDownload.vue";
-import TdInput from "@/components/TdInput.vue";
+import IconDownload from '@/components/icons/IconDownload.vue'
+import TdInput from '@/components/TdInput.vue'
 
 export default {
   data() {
     return {
-      listOfText: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    };
+      listOfText: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+    }
   },
   props: {
     lang: { type: String, required: true },
@@ -72,16 +72,16 @@ export default {
   },
   methods: {
     textInputChanged(idx, text) {
-      this.listOfText[idx] = text;
-      this.$emit("tableInputChanged", this.listOfText);
+      this.listOfText[idx] = text
+      this.$emit('tableInputChanged', this.listOfText)
     },
   },
   components: {
     IconDownload,
     TdInput,
   },
-  emits: ["tableInputChanged"],
-};
+  emits: ['tableInputChanged'],
+}
 </script>
 <style scoped>
 table,

@@ -1,10 +1,10 @@
 <script setup>
-import { RouterView } from "vue-router";
-import NavbarHeader from "@/components/navbar/NavbarHeader.vue";
+import { RouterView } from 'vue-router'
+import NavbarHeader from '@/components/navbar/NavbarHeader.vue'
 </script>
 
 <template>
-  <div class="mx-56 px-2">
+  <div class="mx-104 px-2">
     <navbar-header></navbar-header>
     <div class="px-8 py-14">
       <router-view />

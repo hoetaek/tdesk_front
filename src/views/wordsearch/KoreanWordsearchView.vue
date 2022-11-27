@@ -22,43 +22,43 @@
 </template>
 
 <script>
-import WordsearchTemplate from "@/components/wordsearch/WordsearchTemplate.vue";
-import WorksheetOptionList from "@/components/worksheet/WorksheetOptionList.vue";
-import OptionSelection from "@/components/OptionSelection.vue";
+import WordsearchTemplate from '@/components/wordsearch/WordsearchTemplate.vue'
+import WorksheetOptionList from '@/components/worksheet/WorksheetOptionList.vue'
+import OptionSelection from '@/components/OptionSelection.vue'
 
 export default {
   data() {
     return {
       optionList: [
-        { title: "활동지 만들기", isActive: false, to: "worksheet" },
+        { title: '활동지 만들기', isActive: false, to: 'worksheet' },
         {
-          title: "언어 선택",
+          title: '언어 선택',
           isActive: false,
-          to: "wordsearch",
+          to: 'wordsearch',
         },
-        { title: "정보 입력", isActive: true },
+        { title: '정보 입력', isActive: true },
       ],
-      level: "EASY",
+      level: 'EASY',
       isScramble: true,
       listOfText: [],
-    };
+    }
   },
   methods: {
     selectLevel(level) {
-      this.level = level;
+      this.level = level
     },
     selectIsScramble(isScramble) {
-      this.isScramble = isScramble;
+      this.isScramble = isScramble
     },
     tableInputChanged(listOfText) {
-      this.listOfText = listOfText;
+      this.listOfText = listOfText
     },
     download() {
       // TODO 다운로드 받는 기능
-      console.log("download");
-      console.log(this.level);
-      console.log(this.isScramble);
-      console.log(this.listOfText);
+      console.log('download')
+      console.log(this.level)
+      console.log(this.isScramble)
+      console.log(this.listOfText)
     },
   },
   components: {
@@ -66,5 +66,5 @@ export default {
     WordsearchTemplate,
     OptionSelection,
   },
-};
+}
 </script>

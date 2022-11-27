@@ -14,6 +14,6 @@
 </template>
 
 <script>
-import NavbarItem from "@/components/navbar/NavbarItem.vue";
-export default { components: { NavbarItem } };
+import NavbarItem from '@/components/navbar/NavbarItem.vue'
+export default { components: { NavbarItem } }
 </script>

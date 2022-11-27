@@ -21,13 +21,13 @@
 </template>
 
 <script>
-import SmallButton from "@/components/SmallButton.vue";
+import SmallButton from '@/components/SmallButton.vue'
 
 export default {
   data() {
     return {
       selectedIdx: 0,
-    };
+    }
   },
   props: {
     optionName: String,
@@ -37,14 +37,14 @@ export default {
   components: {
     SmallButton,
   },
-  emits: ["buttonSelectedEvent"],
+  emits: ['buttonSelectedEvent'],
   methods: {
     selectButton(idx) {
       if (this.selectedIdx !== idx) {
-        this.selectedIdx = idx;
-        this.$emit("buttonSelectedEvent", this.valueList[idx]);
+        this.selectedIdx = idx
+        this.$emit('buttonSelectedEvent', this.valueList[idx])
       }
     },
   },
-};
+}
 </script>
