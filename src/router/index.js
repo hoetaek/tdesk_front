@@ -13,70 +13,50 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () =>
-        import(/* webpackChunkName: "about" */ '@/views/AboutView.vue'),
+      component: () => import('@/views/AboutView.vue'),
     },
     {
       path: '/worksheet',
-      component: () =>
-        import(/* webpackChunkName: "worksheet" */ '@/views/WorksheetView.vue'),
+      component: () => import('@/views/WorksheetView.vue'),
       children: [
         {
           path: '',
           name: 'worksheet',
-          component: () =>
-            import(
-              /* webpackChunkName: "selection" */ '@/views/WorksheetSelectionView.vue'
-            ),
+          component: () => import('@/views/WorksheetSelectionView.vue'),
         },
         {
           path: 'wordsearch',
-          component: () =>
-            import(
-              /* webpackChunkName: "wordsearch" */ '@/views/worksheet/WordsearchView.vue'
-            ),
+          component: () => import('@/views/worksheet/WordsearchView.vue'),
           children: [
             {
               path: '',
               name: 'wordsearch',
               component: () =>
-                import(
-                  /* webpackChunkName: "wordsearch_kr" */ '@/components/wordsearch/LangSelection.vue'
-                ),
+                import('@/components/wordsearch/LangSelection.vue'),
             },
             {
               path: 'kr',
               name: 'wordsearch_kr',
               component: () =>
-                import(
-                  /* webpackChunkName: "wordsearch_kr" */ '@/views/wordsearch/KoreanWordsearchView.vue'
-                ),
+                import('@/views/wordsearch/KoreanWordsearchView.vue'),
             },
             {
               path: 'en',
               name: 'wordsearch_en',
               component: () =>
-                import(
-                  /* webpackChunkName: "wordsearch_en" */ '@/views/wordsearch/EnglishWordsearchView.vue'
-                ),
+                import('@/views/wordsearch/EnglishWordsearchView.vue'),
             },
           ],
         },
         {
           path: 'board',
           name: 'board',
-          component: () =>
-            import(
-              /* webpackChunkName: "board" */ '@/views/worksheet/BoardView.vue'
-            ),
+          component: () => import('@/views/worksheet/BoardView.vue'),
         },
         {
           path: 'dobble',
           name: 'dobble',
-          component: () =>
-            import(
-              /* webpackChunkName: "dobble" */ '@/views/worksheet/DobbleView.vue'
-            ),
+          component: () => import('@/views/worksheet/DobbleView.vue'),
         },
       ],
     },
@@ -84,10 +64,7 @@ const router = createRouter({
     {
       path: '/suggestion',
       name: 'suggestion',
-      component: () =>
-        import(
-          /* webpackChunkName: "suggestion" */ '@/views/SuggestionView.vue'
-        ),
+      component: () => import('@/views/SuggestionView.vue'),
     },
   ],
 })
