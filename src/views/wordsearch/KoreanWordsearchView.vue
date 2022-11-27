@@ -25,6 +25,7 @@
 import WordsearchTemplate from '@/components/wordsearch/WordsearchTemplate.vue'
 import WorksheetOptionList from '@/components/worksheet/WorksheetOptionList.vue'
 import OptionSelection from '@/components/OptionSelection.vue'
+import fetchWordsearch from '@/api/functions/wordsearch'
 
 export default {
   data() {
@@ -53,12 +54,14 @@ export default {
     tableInputChanged(listOfText) {
       this.listOfText = listOfText
     },
-    download() {
-      // TODO 다운로드 받는 기능
+    async download() {
+      // TODO 다운로드 받는 기능 - 필요한 data 담기
       console.log('download')
       console.log(this.level)
       console.log(this.isScramble)
       console.log(this.listOfText)
+      const res = await fetchWordsearch({})
+      console.log(res)
     },
   },
   components: {

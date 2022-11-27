@@ -5,13 +5,13 @@ export default {
   Django_API: `${DjangoBase}api/${API_VERSION}/`,
 
   /* Worksheet */
-  worksheet_all: 'worksheet/',
+  worksheet: 'worksheet/',
   worksheet_detail: (id) => {
     return `worksheet/${id}`
   },
 
   /* Wordsearch */
-  wordsearch_all: 'wordsearch/',
+  wordsearch: 'wordsearch/',
   wordsearch_detail: (id) => {
     return `wordsearch/${id}`
   },
