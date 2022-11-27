@@ -11,6 +11,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  env: {
+    amd: true, //require
+    node: true, //module
+  },
   overrides: [
     {
       files: ['cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}'],
